@@ -49,7 +49,13 @@ Refer to technology-specific instruction files:
 - Create reusable components for common UI patterns
 - Keep components focused on a single responsibility
 - Use props for configuration, not duplication
-- Document component APIs with TypeScript types
+- Document component APIs with TypeScript types. Every reusable `.astro` component must expose a `Props` interface; add TSDoc/JSDoc for non-obvious props, constraints, and defaults.
+
+### Comments and TypeScript Style
+
+- Comments explain user-facing intent, accessibility rationale, or non-obvious implementation decisions. Do not use comments to narrate obvious markup or utility classes.
+- Keep comments current with the component; update or remove them in the same change as the related code.
+- Use two-space indentation, single quotes, semicolons, and trailing commas in multiline TypeScript lists. Run ESLint to enforce the repository's supported TypeScript rules.
 
 ## Development Workflow
 
